@@ -31,7 +31,7 @@ public class Testnontdsmerchant4 {
   @Before
   public void setUp() {
     ChromeOptions options = new ChromeOptions();
-    //options.addArguments("--headless");
+    options.addArguments("--headless");
     options.addArguments("--disable-gpu");
     options.addArguments("--window-size=1302,816");
     options.addArguments("--no-sandbox");
