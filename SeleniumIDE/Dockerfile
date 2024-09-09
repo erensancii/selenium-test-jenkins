@@ -1,6 +1,4 @@
 FROM maven:3.9.0-eclipse-temurin-17
-# Proje dosyalarını kopyalayın
-COPY . /usr/src/app
 
 # Çalışma dizinini ayarla
 WORKDIR /usr/src/app
@@ -38,6 +36,9 @@ RUN unzip /tmp/chromedriver.zip -d /usr/local/bin/
 RUN rm /tmp/chromedriver.zip
 #yetki verme
 RUN chmod +x /usr/local/bin/chromedriver 
+
+# Proje dosyalarını kopyalayın
+COPY . /usr/src/app
 
 # Maven ile proje build et
 RUN mvn clean install
