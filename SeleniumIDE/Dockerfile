@@ -47,7 +47,7 @@
 # #oluşurken test ediyor 
 
 
-FROM maven:3.9.0-eclipse-temurin-21-jammy
+FROM maven:3.9.0-eclipse-temurin-17-jammy
 # Proje dosyalarını kopyalayın
 COPY . /usr/src/app
 
