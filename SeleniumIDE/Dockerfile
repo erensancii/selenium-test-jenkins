@@ -41,4 +41,4 @@ RUN chmod +x /usr/local/bin/chromedriver
 COPY . /usr/src/app
 
 # Maven ile proje build et
-RUN mvn clean install
+RUN mvn clean test
