@@ -61,8 +61,8 @@ public class Testtdsnotonusmerchant7 {
       driver.findElement(By.id("secure_common_payment:text.card_number")).sendKeys("5406 6754 0667 5403");
       driver.findElement(By.id("secure_common_payment:text.expiration_date")).sendKeys("12/26");
       driver.findElement(By.id("secure_common_payment:text.cvv")).sendKeys("000");
-      driver.findElement(By.name("paymentAgreement")).click();
-      driver.findElement(By.name("isThreeDSecure")).click();
+      driver.findElement(By.id("paymentAgreement")).click();
+      driver.findElement(By.id("isThreeDSecure")).click();
       wait.until(ExpectedConditions.elementToBeClickable(By.id("pay-button"))).click();
       wait.until(ExpectedConditions.elementToBeClickable(By.id("otp-input"))).sendKeys("123456");
       wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div/button"))).click();
