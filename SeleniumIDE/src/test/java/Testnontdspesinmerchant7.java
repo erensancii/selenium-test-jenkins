@@ -69,7 +69,7 @@ public class Testnontdspesinmerchant7 {
     driver.findElement(By.id("secure_common_payment:text.card_number")).sendKeys("5404 3554 0435 5405");
     driver.findElement(By.id("secure_common_payment:text.expiration_date")).sendKeys("12/26");
     driver.findElement(By.id("secure_common_payment:text.cvv")).sendKeys("001");
-    driver.findElement(By.name("paymentAgreement")).click();
+    driver.findElement(By.id("paymentAgreement")).click();
     WebElement confirmButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("pay-button")));
       ((JavascriptExecutor) driver).executeScript("arguments[0].click();", confirmButton);
     wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h5[contains(text(), 'ödeme işleminiz başarıyla gerçekleştirildi')]")));

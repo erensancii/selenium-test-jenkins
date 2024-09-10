@@ -69,9 +69,9 @@ public class Testtdstaksitmerchant4 {
         driver.findElement(By.id("secure_common_payment:text.card_number")).sendKeys("5571 1355 7113 5575");
         driver.findElement(By.id("secure_common_payment:text.expiration_date")).sendKeys("12/26");
         driver.findElement(By.id("secure_common_payment:text.cvv")).sendKeys("000");
-        driver.findElement(By.name("installmentData.installmentInfo[1].checked")).click();
-        driver.findElement(By.name("paymentAgreement")).click();
-        driver.findElement(By.name("isThreeDSecure")).click();
+        driver.findElement(By.id("installmentCheckbox1")).click();
+        driver.findElement(By.id("paymentAgreement")).click();
+        driver.findElement(By.id("isThreeDSecure")).click();
         WebElement confirmButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("pay-button")));
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", confirmButton);
         wait.until(ExpectedConditions.elementToBeClickable(By.id("otp-input"))).sendKeys("123456");

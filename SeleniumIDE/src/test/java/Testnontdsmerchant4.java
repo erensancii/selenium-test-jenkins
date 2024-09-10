@@ -31,7 +31,7 @@ public class Testnontdsmerchant4 {
   @Before
   public void setUp() {
     ChromeOptions options = new ChromeOptions();
-    //options.addArguments("--headless");
+    options.addArguments("--headless");
     options.addArguments("--disable-gpu");
     options.addArguments("--window-size=1302,816");
     options.addArguments("--no-sandbox");
@@ -69,8 +69,8 @@ public class Testnontdsmerchant4 {
     driver.findElement(By.id("secure_common_payment:text.card_number")).sendKeys("5571 1355 7113 5575");
     driver.findElement(By.id("secure_common_payment:text.expiration_date")).sendKeys("12/26");
     driver.findElement(By.id("secure_common_payment:text.cvv")).sendKeys("000");
-    driver.findElement(By.name("installmentData.installmentInfo[1].checked")).click();
-    driver.findElement(By.name("paymentAgreement")).click();
+    driver.findElement(By.id("installmentCheckbox1")).click();
+    driver.findElement(By.id("paymentAgreement")).click();
     WebElement confirmButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("pay-button")));
     ((JavascriptExecutor) driver).executeScript("arguments[0].click();", confirmButton);
     wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h5[contains(text(), 'ödeme işleminiz başarıyla gerçekleştirildi')]")));

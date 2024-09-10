@@ -31,7 +31,7 @@ public class Testtdsmerchant1 {
   @Before
   public void setUp() {
     ChromeOptions options = new ChromeOptions();
-    //options.addArguments("--headless");
+    options.addArguments("--headless");
     options.addArguments("--disable-gpu");
     options.addArguments("--window-size=1302,816");
     options.addArguments("--no-sandbox");
@@ -71,8 +71,8 @@ public class Testtdsmerchant1 {
       driver.findElement(By.id("secure_common_payment:text.card_number")).sendKeys("5404 3554 0435 5405");
       driver.findElement(By.id("secure_common_payment:text.expiration_date")).sendKeys("12/26");
       driver.findElement(By.id("secure_common_payment:text.cvv")).sendKeys("001");
-      driver.findElement(By.name("paymentAgreement")).click();
-      driver.findElement(By.name("isThreeDSecure")).click();
+      driver.findElement(By.id("paymentAgreement")).click();
+      driver.findElement(By.id("isThreeDSecure")).click();
       wait.until(ExpectedConditions.elementToBeClickable(By.id("pay-button"))).click();
       wait.until(ExpectedConditions.elementToBeClickable(By.id("otp-input"))).sendKeys("123456");
       wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div/button"))).click();
