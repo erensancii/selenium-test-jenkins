@@ -47,7 +47,9 @@ public class Testtdsmerchant8 {
   @Test
   public void test() {
     String testUrl = System.getenv("TEST_URL");
-    testUrl = "https://dev-pf-igor.firisbe.com:8443";
+    if (testUrl == null || testUrl.isEmpty()) {
+      testUrl = "https://dev-pf-igor.firisbe.com:8443";
+    }
     driver.get(testUrl);
     driver.manage().window().setSize(new Dimension(1302, 816));
     wait.until(ExpectedConditions.presenceOfElementLocated(By.id("username"))).sendKeys("testmerchant8@firisbe.com");
