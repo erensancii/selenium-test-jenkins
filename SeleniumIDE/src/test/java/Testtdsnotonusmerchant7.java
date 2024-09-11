@@ -37,7 +37,9 @@ public class Testtdsnotonusmerchant7 {
   }
   @Test
   public void test() {
-    driver.get("https://dev-pf-igor.firisbe.com:8443");
+    String testUrl = System.getenv("TEST_URL");
+    testUrl = "https://dev-pf-igor.firisbe.com:8443";
+    driver.get(testUrl);
     driver.manage().window().setSize(new Dimension(1302, 816));
     wait.until(ExpectedConditions.presenceOfElementLocated(By.id("username"))).sendKeys("testmerchant7@firisbe.com");
     wait.until(ExpectedConditions.presenceOfElementLocated(By.id("password"))).sendKeys("Aa123456!");
