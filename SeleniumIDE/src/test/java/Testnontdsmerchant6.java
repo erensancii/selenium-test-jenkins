@@ -76,7 +76,7 @@ public class Testnontdsmerchant6 {
     driver.findElement(By.id("paymentAgreement")).click();
     WebElement confirmButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("pay-button")));
       ((JavascriptExecutor) driver).executeScript("arguments[0].click();", confirmButton);
-    wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h5[contains(text(), 'ödeme işleminiz başarıyla gerçekleştirildi')]")));
+    wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h6[contains(text(), 'ödeme işleminiz başarıyla gerçekleştirildi')]")));
     driver.switchTo().defaultContent();
     wait.until(ExpectedConditions.elementToBeClickable(By.id("user-dropdown-menu-avatar"))).click();
     wait.until(ExpectedConditions.elementToBeClickable(By.id("user-dropdown-logout"))).click();
