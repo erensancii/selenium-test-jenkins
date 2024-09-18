@@ -79,7 +79,7 @@ public class Testtdsmerchant6 {
       wait.until(ExpectedConditions.elementToBeClickable(By.id("pay-button"))).click();
       wait.until(ExpectedConditions.elementToBeClickable(By.id("otp-input"))).sendKeys("123456");
       wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div/button"))).click();
-      wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h5[contains(text(), 'ödeme işleminiz başarıyla gerçekleştirildi')]")));
+      wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h6[contains(text(), 'ödeme işleminiz başarıyla gerçekleştirildi')]")));
     } catch (Exception e) {
         e.printStackTrace();
     } finally {

@@ -80,7 +80,7 @@ public class Testtdstaksitmerchant4 {
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", confirmButton);
         wait.until(ExpectedConditions.elementToBeClickable(By.id("otp-input"))).sendKeys("123456");
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div/button"))).click();
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h5[contains(text(), 'ödeme işleminiz başarıyla gerçekleştirildi')]")));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h6[contains(text(), 'ödeme işleminiz başarıyla gerçekleştirildi')]")));
         driver.switchTo().defaultContent();
         wait.until(ExpectedConditions.elementToBeClickable(By.id("user-dropdown-menu-avatar"))).click();
         wait.until(ExpectedConditions.elementToBeClickable(By.id("user-dropdown-logout"))).click();
